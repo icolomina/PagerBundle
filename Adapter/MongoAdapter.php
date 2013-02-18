@@ -30,7 +30,7 @@ class MongoAdapter implements PagerAdapterInterface \Iterator \Countable{
     
     public function getResults($offset, $limit)
     {
-        
+        return $this->cursor->sort(array('_id' => -1))->skip($offset)->limit($limit);
     }
 
     public function isEmpty()
