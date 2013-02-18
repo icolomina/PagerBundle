@@ -35,7 +35,7 @@ class MongoAdapter implements PagerAdapterInterface \Iterator \Countable{
 
     public function isEmpty()
     {
-        return $this->cursor->empty();
+        return $this->cursor->hasNext();
     }
     
     public function current(){
