@@ -16,6 +16,9 @@ use MakerLabs\PagerBundle\Adapter\PagerAdapterInterface;
 
 class MongoAdapter implements PagerAdapterInterface \Iterator \Countable{
    
+    /**
+     * MongoDB cursor
+     */
     protected $cursor;
     
     public function __construct(\MongoCursor $cursor){
